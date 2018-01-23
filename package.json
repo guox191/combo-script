@@ -1,0 +1,14 @@
+{
+  "name": "combo-script",
+  "version": "0.1.0",
+  "description": "combine scripts",
+  "main": "index.js",
+  "bin": "bin/index.js",
+  "scripts": {},
+  "author": "Mr.Betty<guoxiang191@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "axios": "^0.17.1"
+  }
+}

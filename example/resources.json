@@ -1,0 +1,19 @@
+{
+  "dist": "dist.js",
+  "comment": false,
+  "resouces": [
+    {
+      "name": "vue",
+      "version": "2.5.13",
+      "url": "https://unpkg.com/vue@2.5.13/dist/vue.runtime.min.js"
+    }, {
+      "name": "vuex",
+      "version": "3.0.1",
+      "url": "https://unpkg.com/vuex@3.0.1/dist/vuex.min.js"
+    }, {
+      "name": "vue-router",
+      "version": "3.0.1",
+      "path": "./assets/vue-router.min.js"
+    }
+  ]
+}
