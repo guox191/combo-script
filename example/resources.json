@@ -1,7 +1,7 @@
 {
   "dist": "dist.js",
   "comment": false,
-  "resouces": [
+  "resources": [
     {
       "name": "vue",
       "version": "2.5.13",
