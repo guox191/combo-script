@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+'use strict';
 const fs = require('fs');
 const path = require('path');
 const request = require('request');
@@ -36,13 +36,15 @@ eachSeries(config.resources, (item, cb) => {
   console.log(`Resolving ${item.url || item.path}...`);
   counter += 1;
 
-  const fstream = fs.createWriteStream(resolve(distName), { flags: counter > 1 ? 'a' : 'w' });
+  const fstream = fs.createWriteStream(resolve(distName), {
+    flags: counter > 1 ? 'a' : 'w'
+  });
   if (counter > 1) fstream.write('\n');
 
   if (item.url) download(item, fstream, cb);
   else copy(item, fstream, cb);
 
-}, err => {
+}, (err) => {
   if (err) throw err;
 });
 
@@ -55,17 +57,16 @@ function download(item, writeStream, cb) {
     .get(item.url)
     .pipe(writeStream)
     .on('finish', cb)
-    .on('error', err => {
+    .on('error', (err) => {
       throw err;
     });
-
 }
 
 function copy(item, writeStream, cb) {
   fs.createReadStream(resolve(item.path))
     .pipe(writeStream)
     .on('finish', cb)
-    .on('error', err => {
+    .on('error', (err) => {
       throw err;
     });
 }

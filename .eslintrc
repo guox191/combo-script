@@ -1,0 +1,4 @@
+{
+  "extends": "@joyeecheung/eslint-config-node-core"
+}
+
